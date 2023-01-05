@@ -2,7 +2,7 @@
 // Please do not change this file!
 interface CssExports {
   'container': string;
-  'loginPage': string;
+  'registrationPage': string;
 }
 export const cssExports: CssExports;
 export default cssExports;

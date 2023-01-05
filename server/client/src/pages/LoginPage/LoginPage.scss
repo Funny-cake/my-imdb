@@ -1,7 +1,16 @@
 .loginPage {
 	width: 100%;
 	height: 750px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
 	.container {
-		width: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 80px;
+		width: 70%;
+		margin-top: 100px;
 	}
 }
