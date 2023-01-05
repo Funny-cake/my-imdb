@@ -8,7 +8,7 @@ const Header = () => {
         <div className={styles.header}>
             <ul style={{ listStyleType: "", padding: 0 }}>
                 <li>
-                    <Link to="/">[Home]</Link>
+                    <Link to="/home">[Home]</Link>
                 </li>
                 <li>
                     <Link to="/login">[Login]</Link>
