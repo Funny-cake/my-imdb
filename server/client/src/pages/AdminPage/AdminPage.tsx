@@ -152,7 +152,7 @@ const AdminPage = (props: any) => {
 
 	return (
 		<div className={styles.adminPage} style={biStyle}>
-			<div className={"container"}>
+			<div className={styles.container}>
 				<div className={"toolbar"}>
 					<button name="block" onClick={onBlockClick}>block</button>
 					<button name="unblock" onClick={onUnblockClick}>unblock</button>

@@ -33,7 +33,9 @@ const LoginPage = () => {
 	const biStyle = {
 		backgroundImage: `url(${background})`,
 		backgroundRepeat: 'no-repeat',
-		backgroundPosition: 'center'
+		backgroundPosition: 'center',
+		backgroundSize: 'cover'
+		
 	};
 
 	return (
