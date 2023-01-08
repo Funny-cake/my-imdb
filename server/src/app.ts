@@ -1,27 +1,25 @@
 import express, { Express } from "express";
 import path from "path";
-import { getConstantsAsync } from "./services/constants.service"
-import pageRoutes from "./routes/page.routes";
-import apiRoutes from "./routes/api.routes";
-import userRoutes from "./routes/user.routes";
-import dbInit from './db/init'
+import pageRoutes from "./routes/page.routes.js";
+import userRoutes from "./routes/user.routes.js";
+import dbInit from './db/init.js'
+import { getConstantsAsync } from "./services/constants.service.js";
+import { getAppPath } from "./services/file.service.js";
 
 dbInit();
 
-getConstantsAsync()
-  .then(constants => {
-    const app: Express = express();
+const constants = await getConstantsAsync();
+const appPath = await getAppPath();
 
-    app.use(express.static(path.join(__dirname, "../client/dist")));
+console.log(appPath);
 
-    pageRoutes(app);
-    userRoutes(app);
-    //apiRoutes(app);
+const app: Express = express();
 
-    app.listen(constants.port, async () => {
-      console.log(`[server]: Server is running at http://localhost:${constants.port}`);
-    });
-  })
-  .catch(err => {
-    console.error(err);
-  });
+app.use(express.static(path.join(appPath, "client/dist")));
+
+pageRoutes(app);
+userRoutes(app);
+
+app.listen(constants.port, async () => {
+	console.log(`[server]: Server is running at http://localhost:${constants.port}`);
+});

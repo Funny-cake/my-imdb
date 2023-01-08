@@ -1,5 +1,5 @@
-import { Op } from 'sequelize';
-import User, { IUserInput, IUserOutput } from '../models/user.model';
+import { Op } from "sequelize";
+import User, { IUserInput, IUserOutput } from "../models/user.model.js"
 //import { GetAllIngredientsFilters } from './types';
 
 export const createAsync = async (payload: IUserInput): Promise<IUserOutput> => {

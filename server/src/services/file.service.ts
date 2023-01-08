@@ -1,5 +1,6 @@
 import { constants, promises } from "fs";
 import { dirname } from "path";
+import appRootPath from "app-root-path";
 
 const read = constants.R_OK;
 const write = constants.W_OK;
@@ -34,18 +35,19 @@ export const checkFileExistsAsync = async (file: string, mode: number): Promise<
 }
 
 export const getAppPath = async (): Promise<string> => {
-    for (let modulePath of module.paths) {
-        var result = await checkFileCanReadAsync(modulePath)
-            .then((res) => {
-                console.log(res, modulePath);
-                return res ? dirname(modulePath) : null;
-            })
-            .catch((err) => {
-                return null;
-            });
+	return appRootPath.path;
+    // for (let modulePath of module.paths) {
+    //     var result = await checkFileCanReadAsync(modulePath)
+    //         .then((res) => {
+    //             console.log(res, modulePath);
+    //             return res ? dirname(modulePath) : null;
+    //         })
+    //         .catch((err) => {
+    //             return null;
+    //         });
 
-        if (result) {
-            return result;
-        }
-    }
+    //     if (result) {
+    //         return result;
+    //     }
+    // }
 }

@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import jwt from "jsonwebtoken";
-import authConfig from "../config/auth.config";
+import authConfig from "../config/auth.config.js";
 
 const verifyToken = (req: Request, res: Response, next: any) => {
     let token = "";

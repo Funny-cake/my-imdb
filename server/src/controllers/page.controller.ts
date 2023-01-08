@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { getAppPath } from "../services/file.service";
+import { getAppPath } from "../services/file.service.js";
 import path from "path";
 
 export const home = (req: Request, res: Response, next: any) => {

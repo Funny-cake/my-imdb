@@ -1,6 +1,6 @@
 import { Response, Request } from "express";
-import { IUserOutput } from "../db/models/user.model";
-import { findAllAsync } from "../services/user.service";
+import { IUserOutput } from "../db/models/user.model.js";
+import { findAllAsync } from "../services/user.service.js";
 // import { mapUser } from "../helpers/user.helper.js";
 
 //import { getHash, getSlatedHash } from "../helpers/hash.helper.js";

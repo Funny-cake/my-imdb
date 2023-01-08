@@ -1,6 +1,6 @@
-import * as userDal from "../db/dal/user.dal";
+import * as userDal from "../db/dal/user.dal.js";
 //import {GetAllIngredientsFilters} from '../dal/types'
-import { IUserInput, IUserOutput } from '../db/models/user.model';
+import { IUserInput, IUserOutput } from "../db/models/user.model.js";
 
 export const createAsync = (payload: IUserInput): Promise<IUserOutput> => {
     return userDal.createAsync(payload);

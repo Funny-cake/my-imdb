@@ -1,4 +1,4 @@
-import { IUserOutput } from "../db/models/user.model";
+import { IUserOutput } from "../db/models/user.model.js";
 
 // export function mapUser(user: User): IUserOutput {
 // 	return {

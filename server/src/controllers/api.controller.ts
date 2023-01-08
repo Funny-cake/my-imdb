@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { getConstantsAsync } from "../services/constants.service";
+import { getConstantsAsync } from "../services/constants.service.js";
 
 export const get = (req: Request, res: Response, next: any) => {
     getConstantsAsync()
