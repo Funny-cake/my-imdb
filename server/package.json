@@ -33,11 +33,11 @@
   },
   "homepage": "https://github.com/Funny-cake/my-imdb#readme",
   "devDependencies": {
-    "@types/jsonwebtoken": "^9.0.0",
     "@types/node": "^18.11.18"
   },
   "dependencies": {
     "@types/express": "^4.17.15",
+    "@types/jsonwebtoken": "^9.0.0",
     "axios": "^1.2.1",
     "bootstrap": "^5.2.3",
     "cors": "^2.8.5",
