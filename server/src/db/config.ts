@@ -2,7 +2,7 @@
 import { Dialect, Sequelize } from 'sequelize'
 import { getConstantsAsync } from "../services/constants.service";
 
-const sequelizeConnection = new Sequelize('', '', '', {
+const sequelizeConnection = new Sequelize('04_admin_tool_bd', 'root', '1234', {
     dialect: 'mysql'
 });
 Sequelize.beforeConnect(async (config) => {
