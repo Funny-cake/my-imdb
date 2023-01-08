@@ -6,9 +6,7 @@ const pageRoutes = (app: Express) => {
 
 	router.get("/", home);
 	router.get("/home", home);
-	router.get("/login", home);
-	router.get("/registration", home);
-	router.get("/admin", home);
+    router.get("/about", home);
 
 	app.use('/', router);
 };

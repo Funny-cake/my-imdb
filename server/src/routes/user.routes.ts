@@ -1,16 +1,18 @@
-
 import { Express, Router } from "express";
-import { 
-	//create, 
-	findAll
-	//, findOne, update, deleteUser, deleteAllUsers, blockUser, unblockUser, blockAllUsers, unblockAllUsers 
-} from "../controllers/users.controller.js";
+import {
+     //create,
+      findAll, 
+      //findOne, update, deleteUser, deleteAllUsers, blockUser, unblockUser, blockAllUsers, unblockAllUsers 
+    } from "../controllers/user.controller.js";
+//import verifyToken from "../middleware/auth-jwt.js";
 
 const userRoutes = (app: Express) => {
 	var router = Router();
 
-	//router.post("/", create);
-	router.get("/", findAll);
+    router.get("/", findAll);
+
+	// router.post("/", create);
+	// router.get("/", [verifyToken], findAll);
 	// router.get("/:id", [verifyToken], findOne);
 	// router.put("/:id", [verifyToken], update);
 	// router.delete("/:id", [verifyToken], deleteUser);
