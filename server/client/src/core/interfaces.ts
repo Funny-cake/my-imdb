@@ -8,7 +8,7 @@ export interface IUser {
 	email: string;
 	createdAt: Date;
 	lastLoginAt: Date;
-	roles: string[];
+	roles: string;
 	blockedAt: Date;
 	deletedAt: Date;
 }

@@ -8,13 +8,13 @@ import { ILoginResult } from '../../core/interfaces';
 const RegistrationPage = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	const [remeber, setRemember] = useState(false);
+	// const [remeber, setRemember] = useState(false);
 	const navigate = useNavigate();
 
 	function onSubmit(e: React.MouseEvent<HTMLButtonElement>) {
 		e.preventDefault();
 		if (email && password) {
-			AuthService.login(email, password, remeber)
+			AuthService.login(email, password, false)
 				.then((data: ILoginResult) => {
 					if (data) {
 						navigate("/");
@@ -60,14 +60,6 @@ const RegistrationPage = () => {
 							value={password}
 							onChange={e => setPassword(e.target.value)} />
 					</div>
-					{/* <div className={"mb-3 form-check"}>
-						<input type="checkbox" className={"form-check-input"} id="exampleCheck1" />
-						<label
-							className={"form-check-label"}
-							htmlFor={"exampleCheck1"}
-							value={remeber}
-							onChange={e => setRemember(e.target.value)}>Remember me</label>
-					</div> */}
 					<button type="submit" className={"btn btn-primary"} onClick={(e) => onSubmit(e)}>Sing in</button>
 				</form>
 			</div>

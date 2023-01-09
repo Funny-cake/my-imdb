@@ -35,9 +35,8 @@ export const deleteByIdAsync = async (id: number): Promise<boolean> => {
 export const findAllAsync = async (filter?: IUserFilter): Promise<IUserOutput[]> => {
 	filter = filter ?? {} as IUserFilter;
 	return User.findAll({
-		where: {
-			//id: filter.id
-			email: filter.email
-		}
+		    where: {
+		        ...(filter?.email && { email: { [Op.eq]: filter.email } })
+		    }
 	});
 }

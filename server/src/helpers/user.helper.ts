@@ -9,6 +9,7 @@ export function mapUser(user: IUserOutput): IUserOutput {
 		lastLoginAt: user.lastLoginAt,
 		updatedAt: user.updatedAt,
 		blockedAt: user.blockedAt,
-		deletedAt: user.deletedAt
+		deletedAt: user.deletedAt,
+		roles: user.roles
 	} as IUserOutput;
 }

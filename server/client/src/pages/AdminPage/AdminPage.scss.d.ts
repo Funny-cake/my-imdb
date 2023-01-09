@@ -3,6 +3,7 @@
 interface CssExports {
   'adminPage': string;
   'container': string;
+  'table': string;
   'toolbar': string;
 }
 export const cssExports: CssExports;
