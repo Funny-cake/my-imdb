@@ -1,5 +1,5 @@
-import { DataTypes, Model, Optional, Sequelize } from "sequelize"
-import sequelizeConnection from "../config.js"
+import { DataTypes, Model, Optional, Sequelize } from "sequelize";
+import sequelizeConnection from "../config.js";
 
 interface IUser {
     id: number;

@@ -36,18 +36,4 @@ export const checkFileExistsAsync = async (file: string, mode: number): Promise<
 
 export const getAppPath = async (): Promise<string> => {
 	return appRootPath.path;
-    // for (let modulePath of module.paths) {
-    //     var result = await checkFileCanReadAsync(modulePath)
-    //         .then((res) => {
-    //             console.log(res, modulePath);
-    //             return res ? dirname(modulePath) : null;
-    //         })
-    //         .catch((err) => {
-    //             return null;
-    //         });
-
-    //     if (result) {
-    //         return result;
-    //     }
-    // }
 }
