@@ -4,11 +4,13 @@ import Movie from "../models/movie.model.js";
 
 const initAssociations = () => {
 	User.hasMany(Review, {
-		foreignKey: 'userId'
+		foreignKey: "userId",
+		onDelete: "CASCADE"
 	});
 
 	Movie.hasMany(Review, {
-		foreignKey: 'movieId'
+		foreignKey: 'movieId',
+		onDelete: "CASCADE"
 	});
 
 	Review.belongsTo(User);

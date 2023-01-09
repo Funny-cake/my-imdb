@@ -8,6 +8,9 @@ interface IReview {
 	rating: number;
 	userId: number;
 	movieId: number;
+	createdAt: Date;
+	updatedAt: Date;
+	deletedAt: Date;
 }
 
 export interface IReviewInput extends Optional<IReview, 'id'> { }
@@ -20,6 +23,9 @@ class Review extends Model<IReview, IReviewInput> implements IReview {
 	public rating!: number;
 	public userId!: number;
 	public movieId!: number;
+	public createdAt!: Date;
+	public updatedAt!: Date;
+	public deletedAt!: Date;
 }
 
 Review.init({
@@ -42,6 +48,15 @@ Review.init({
 	},
 	movieId: {
 		type: DataTypes.INTEGER
+	},
+	createdAt: {
+		type: DataTypes.DATE
+	},
+	updatedAt: {
+		type: DataTypes.DATE
+	},
+	deletedAt: {
+		type: DataTypes.DATE
 	}
 }, {
 	timestamps: true,
