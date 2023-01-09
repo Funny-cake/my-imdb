@@ -1,5 +1,5 @@
 import * as reviewDal from "../db/dal/review.dal.js";
-//import {GetAllIngredientsFilters} from '../dal/types'
+import { IReviewFilter } from '../models/filters.js';
 import { IReviewInput, IReviewOutput } from "../db/models/review.model.js";
 
 export const createAsync = (payload: IReviewInput): Promise<IReviewOutput> => {
@@ -18,6 +18,6 @@ export const deleteByIdAsync = (id: number): Promise<boolean> => {
     return reviewDal.deleteByIdAsync(id);
 }
 
-export const findAllAsync = (/*filters: GetAllIngredientsFilters*/): Promise<IReviewOutput[]> => {
-    return reviewDal.findAllAsync(/*filters*/);
+export const findAllAsync = (filters?: IReviewFilter): Promise<IReviewOutput[]> => {
+    return reviewDal.findAllAsync(filters);
 }

@@ -10,6 +10,7 @@ const reviewRoutes = (app: Express) => {
 	var router = Router();
 
     router.get("/", findAll);
+    router.get("/:userId", findAll);
 
 	// router.post("/", create);
 	// router.get("/", [verifyToken], findAll);
